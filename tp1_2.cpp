@@ -8,6 +8,7 @@ int cuadrado(int num);
 void cuadrado2(int num);
 void invertir(int num1, int num2);
 void ordena(int num1, int num2);
+void ingresoVariables();
 
 int main()
 {
@@ -25,6 +26,13 @@ int main()
 
     invertir(15, 25);
     ordena(99, 100);
+
+    fflush(stdin);
+    getchar();
+    system("cls");
+
+    ingresoVariables();
+
     return 0;
 }
 
@@ -59,6 +67,16 @@ void ordena(int num1, int num2)
         printf("\nEl numero 1 %d es mayor que el numero 2 %d\n",num1, num2);
     }else
     {
-        printf("\nEl numero 2 %d es mayor que el numero 2 %d\n",num2, num1);
+        printf("\nEl numero 2 %d es mayor que el numero 1 %d\n",num2, num1);
     }
+}
+
+void ingresoVariables()
+{
+    int var1, var2;
+    printf("\nIngrese los valores que desea invertir y ordenar:\n");
+    scanf(">%d", &var1);
+    scanf(">%d", &var2);
+    ordena(var1, var2);
+    invertir(var1, var2);
 }
